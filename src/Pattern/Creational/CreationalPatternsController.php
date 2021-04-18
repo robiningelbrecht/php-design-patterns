@@ -9,6 +9,7 @@ use App\Pattern\Creational\AbstractFactory\VehicleFactoryInterface;
 use App\Pattern\Creational\Builder\BasicTruckBuilder;
 use App\Pattern\Creational\Builder\HighEndCarBuilder;
 use App\Pattern\Creational\FactoryMethod\CarWithFactoryMethod;
+use App\Pattern\Creational\Singleton\VehicleLogger;
 use App\Vehicle\Enum\Brand;
 use App\Vehicle\Truck;
 use Money\Money;
@@ -49,8 +50,27 @@ class CreationalPatternsController {
    * Demonstrates how to use builder pattern.
    */
   public function exampleBuilder() {
-    $high_end_car = (new HighEndCarBuilder(Brand::BMW(), Money::EUR(100000)))->addAudioSystem()->addSeatCovers()->getVehicle();
-    $basic_truck = (new BasicTruckBuilder(Brand::VOLKSWAGEN(), Money::EUR(100000)))->addAudioSystem()->addSeatCovers()->getVehicle();
+    $high_end_car = (new HighEndCarBuilder(Brand::BMW(), Money::EUR(100000)))
+      ->addAudioSystem()
+      ->addSeatCovers()
+      ->getVehicle();
+    $basic_truck = (new BasicTruckBuilder(Brand::VOLKSWAGEN(), Money::EUR(100000)))
+      ->addAudioSystem()
+      ->addSeatCovers()
+      ->getVehicle();
+  }
+
+  /**
+   * Demonstrates how to use singleton pattern.
+   *
+   * @throws \Exception
+   */
+  public function exampleSingleton() {
+    VehicleLogger::log('Log a message');
+    
+    if (VehicleLogger::getInstance() !== VehicleLogger::getInstance()) {
+      throw new \Exception('Loggers are different, no valid singleton');
+    }
   }
 
   /**
