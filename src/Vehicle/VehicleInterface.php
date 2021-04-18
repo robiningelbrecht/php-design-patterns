@@ -3,6 +3,7 @@
 
 namespace App\Vehicle;
 
+use App\Vehicle\Enum\Brand;
 use Money\Money;
 
 /**
@@ -13,8 +14,24 @@ use Money\Money;
 interface VehicleInterface {
 
   /**
+   * @return \App\Vehicle\Enum\Brand
+   */
+  public function getBrand(): Brand;
+
+  /**
    * @return \Money\Money
    */
   public function getTotalPrice(): Money;
+
+  /**
+   * @return void
+   */
+  public function startEngine(): void;
+
+  /**
+   * @param \App\Vehicle\VehicleDefaultPart $part
+   * @return \App\Vehicle\VehicleInterface
+   */
+  public function addDefaultPart(VehicleDefaultPart $part): VehicleInterface;
 
 }

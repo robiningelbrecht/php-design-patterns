@@ -3,19 +3,19 @@
 
 namespace App\Vehicle;
 
-use Money\Money;
 
 /**
- * Class Truck.
+ * Class Car.
  *
  * @package App\Vehicle
  */
-class Truck extends VehicleBase {
+class Car extends VehicleBase {
 
   /**
    * {@inheritdoc}
    */
   public function startEngine(): void {
-    echo 'Truck engine started';
+    echo 'Car engine started';
   }
+
 }

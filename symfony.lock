@@ -44,6 +44,9 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "spatie/enum": {
+        "version": "3.8.0"
+    },
     "symfony/cache": {
         "version": "v5.2.6"
     },
