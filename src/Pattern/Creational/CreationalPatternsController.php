@@ -40,10 +40,17 @@ class CreationalPatternsController {
    * Demonstrates how to use abstract factory pattern.
    */
   public function exampleAbstractFactory() {
+    $price = Money::EUR(2000000);
+
     // Start engines of BMW's.
-    $this->startEngines(new BmwVehicleFactory());
+    $bmw_factory = new BmwVehicleFactory();
+    $bmw_factory->createCar($price)->startEngine();
+    $bmw_factory->createTruck($price)->startEngine();
+
     // Start engines of Mercedes'.
-    $this->startEngines(new MercedesVehicleFactory());
+    $mercedes_factory = new MercedesVehicleFactory();
+    $mercedes_factory->createCar($price)->startEngine();
+    $mercedes_factory->createTruck($price)->startEngine();
   }
 
   /**
@@ -67,19 +74,10 @@ class CreationalPatternsController {
    */
   public function exampleSingleton() {
     VehicleLogger::log('Log a message');
-    
+
     if (VehicleLogger::getInstance() !== VehicleLogger::getInstance()) {
       throw new \Exception('Loggers are different, no valid singleton');
     }
   }
 
-  /**
-   * @param \App\Pattern\Creational\AbstractFactory\VehicleFactoryInterface $factory
-   */
-  protected function startEngines(VehicleFactoryInterface $factory) {
-    $price = Money::EUR(2000000);
-
-    $factory->createCar($price)->startEngine();
-    $factory->createTruck($price)->startEngine();
-  }
 }
