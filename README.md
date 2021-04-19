@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/robiningelbrecht/php-design-patterns/workflows/CI/badge.svg)](https://github.com/robiningelbrecht/php-design-patterns/actions)
+
 # Included patterns
 
 ## Creational
