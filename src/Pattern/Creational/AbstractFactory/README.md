@@ -9,7 +9,9 @@ without specifying their concrete classes.
 
 ## Structure
 
-![Structure](/public/assets/Pattern/Creational/AbstractFactory/structure.png)
+<p align="center">
+  <img src="/public/assets/Pattern/Creational/AbstractFactory/structure.png">
+</p>
 
 ## Source:
 
