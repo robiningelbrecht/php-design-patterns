@@ -15,9 +15,11 @@ class Truck extends VehicleBase {
   /**
    * {@inheritdoc}
    */
-  public function startEngine(): void {
-    echo 'put key into ignition';
-    echo 'turn key';
-    echo 'Truck engine started';
+  public function startEngine(): array {
+    return [
+      'put key into ignition',
+      'turn key',
+      'truck (' . $this->getBrand()->label . ') engine started'
+    ];
   }
 }

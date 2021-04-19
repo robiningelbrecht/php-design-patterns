@@ -56,9 +56,8 @@ abstract class VehicleBase implements VehicleInterface {
   /**
    * {@inheritdoc}
    */
-  public function stopEngine(): void {
-    echo 'take key out of ignition';
-    echo 'engine is off';
+  public function stopEngine(): array {
+    return ['take key out of ignition', 'engine is off'];
   }
 
   /**

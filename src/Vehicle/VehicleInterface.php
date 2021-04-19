@@ -24,14 +24,14 @@ interface VehicleInterface {
   public function getTotalPrice(): Money;
 
   /**
-   * @return void
+   * @return string[]
    */
-  public function startEngine(): void;
+  public function startEngine(): array;
 
   /**
-   * @return void
+   * @return string[]
    */
-  public function stopEngine(): void;
+  public function stopEngine(): array;
 
   /**
    * @param \App\Vehicle\VehiclePart $part
