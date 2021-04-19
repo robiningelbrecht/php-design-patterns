@@ -7,6 +7,9 @@ use App\Pattern\Creational\AbstractFactory\BmwVehicleFactory;
 use App\Pattern\Creational\AbstractFactory\MercedesVehicleFactory;
 use App\Pattern\Creational\Builder\BasicTruckBuilder;
 use App\Pattern\Creational\Builder\HighEndCarBuilder;
+use App\Pattern\Creational\FactoryMethod\BmwVehicleEngineFactory;
+use App\Pattern\Creational\FactoryMethod\VehicleEngineFactory;
+use App\Pattern\Creational\FactoryMethod\VolkswagenVehicleEngineFactory;
 use App\Pattern\Creational\Singleton\VehicleLogger;
 use App\Pattern\Creational\StaticCreationMethod\CarWithFactoryMethod;
 use App\Vehicle\Enum\Brand;
@@ -21,7 +24,7 @@ use Money\Money;
 class CreationalPatternsController {
 
   /**
-   * Demonstrates how to use factory method pattern.
+   * Demonstrates how to use static creation method "pattern".
    */
   public function exampleStaticCreationMethod() {
     $price = Money::EUR(2000000);
@@ -50,6 +53,23 @@ class CreationalPatternsController {
     $mercedes_factory = new MercedesVehicleFactory();
     $mercedes_factory->createCar($price)->startEngine();
     $mercedes_factory->createTruck($price)->startEngine();
+  }
+
+  /**
+   * Demonstrates how to use factory method pattern.
+   */
+  public function exampleFactoryMethod(){
+    $engine_factory = new BmwVehicleEngineFactory('car', Money::EUR(200));
+    $engine_factory->start();
+    $engine_factory->stop();
+
+    $engine_factory = new BmwVehicleEngineFactory('truck', Money::EUR(500));
+    $engine_factory->start();
+    $engine_factory->stop();
+
+    $engine_factory = new VolkswagenVehicleEngineFactory('truck', Money::EUR(700));
+    $engine_factory->start();
+    $engine_factory->stop();
   }
 
   /**

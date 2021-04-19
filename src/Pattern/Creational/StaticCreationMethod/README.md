@@ -1,6 +1,6 @@
 # StaticCreationMethod
 
-__StaticCreationMethod__ is a creation method declared as `static`. In other words, 
+__Static Creation Method__ is a creation method declared as `static`. In other words, 
 it can be called on a class and doesn’t require an object to be created.
 
 Don’t be confused when someone calls methods like this a “static factory method”. 

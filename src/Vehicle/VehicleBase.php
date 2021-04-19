@@ -56,6 +56,13 @@ abstract class VehicleBase implements VehicleInterface {
   /**
    * {@inheritdoc}
    */
+  public function stopEngine(): void {
+    echo 'engine is off';
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function addDefaultPart(VehicleDefaultPart $part): VehicleInterface {
     $this->parts[] = $part;
     return $this;

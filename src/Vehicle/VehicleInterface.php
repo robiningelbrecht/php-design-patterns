@@ -29,6 +29,11 @@ interface VehicleInterface {
   public function startEngine(): void;
 
   /**
+   * @return void
+   */
+  public function stopEngine(): void;
+
+  /**
    * @param \App\Vehicle\VehicleDefaultPart $part
    * @return \App\Vehicle\VehicleInterface
    */

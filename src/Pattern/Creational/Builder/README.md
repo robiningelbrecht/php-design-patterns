@@ -1,6 +1,6 @@
 # Builder
 
-![Abstract factory](/public/assets/Pattern/Creational/Builder/icon.png)
+![Builder](/public/assets/Pattern/Creational/Builder/icon.png)
 
 __Builder__ is a creational design pattern that lets you construct complex objects step by step. 
 The pattern allows you to produce different types and representations of an object using the same construction code.
