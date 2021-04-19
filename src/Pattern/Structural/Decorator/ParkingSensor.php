@@ -16,7 +16,7 @@ class ParkingSensor extends VehicleDecorator {
    * {@inheritdoc}
    */
   public function getTotalPrice(): Money {
-    return $this->vehicle->getTotalPrice()->add(Money::EUR(20000));
+    return $this->vehicle->getTotalPrice()->add(Money::EUR(10));
   }
 
 

@@ -15,7 +15,7 @@ class LaneAssist extends VehicleDecorator {
    * {@inheritdoc}
    */
   public function getTotalPrice(): Money {
-    return $this->vehicle->getTotalPrice()->add(Money::EUR(100000));
+    return $this->vehicle->getTotalPrice()->add(Money::EUR(20));
   }
 
 

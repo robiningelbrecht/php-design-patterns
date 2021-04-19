@@ -51,7 +51,7 @@ abstract class VehicleBase implements VehicleInterface {
    * {@inheritdoc}
    */
   public function getTotalPrice(): Money {
-    return $this->getTotalPrice();
+    return $this->price;
   }
 
   /**
