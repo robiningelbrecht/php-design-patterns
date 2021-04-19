@@ -65,4 +65,11 @@ abstract class VehicleDecorator implements VehicleInterface {
     return $this->vehicle;
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function hasPart(Part $p): bool {
+    return $this->vehicle->hasPart($p);
+  }
+
 }
