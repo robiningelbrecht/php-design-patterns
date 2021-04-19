@@ -46,14 +46,14 @@ abstract class VehicleDecorator implements VehicleInterface {
   /**
    * {@inheritdoc}
    */
-  public function startEngine(): void {
+  public function startEngine(): array {
     $this->vehicle->startEngine();
   }
 
   /**
    * {@inheritdoc}
    */
-  public function stopEngine(): void {
+  public function stopEngine(): array {
     $this->vehicle->startEngine();
   }
 

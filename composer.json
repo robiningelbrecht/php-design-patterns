@@ -1,4 +1,6 @@
 {
+    "name": "robiningelbrecht/php-design-patterns",
+    "description": "examples of the most common design patterns",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "dev",

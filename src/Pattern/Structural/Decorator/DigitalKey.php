@@ -13,18 +13,22 @@ class DigitalKey extends VehicleDecorator {
   /**
    * {@inheritdoc}
    */
-  public function startEngine(): void {
-    echo 'make sure key is in range of car';
-    echo 'push button';
-    echo 'car engine started';
+  public function startEngine(): array {
+    return [
+      'make sure key is in range of car',
+      'push button',
+      'car engine started',
+    ];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function stopEngine(): void {
-    echo 'push button';
-    echo 'engine is off';
+  public function stopEngine(): array {
+    return [
+      'push button',
+      'engine is off',
+    ];
   }
 
 }
