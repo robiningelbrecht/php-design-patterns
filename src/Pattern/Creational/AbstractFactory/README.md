@@ -12,6 +12,6 @@ Then, the factory is used for creating specific sub-components.
 
 ![Structure](/public/assets/Pattern/Creational/AbstractFactory/structure.png)
 
-## Source:
+## Source
 
 [https://refactoring.guru/design-patterns/abstract-factory](https://refactoring.guru/design-patterns/abstract-factory)

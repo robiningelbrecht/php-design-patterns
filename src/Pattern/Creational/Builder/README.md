@@ -13,6 +13,6 @@ several methods to configure the resulting object. Builder methods often support
 
 ![Structure](/public/assets/Pattern/Creational/Builder/structure.png)
 
-## Source:
+## Source
 
 [https://refactoring.guru/design-patterns/builder](https://refactoring.guru/design-patterns/builder)

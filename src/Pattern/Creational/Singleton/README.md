@@ -11,6 +11,6 @@ __Identification__: Singleton can be recognized by a static creation method, whi
 
 ![Structure](/public/assets/Pattern/Creational/Singleton/structure.png)
 
-## Source:
+## Source
 
 [https://refactoring.guru/design-patterns/singleton](https://refactoring.guru/design-patterns/singleton)
