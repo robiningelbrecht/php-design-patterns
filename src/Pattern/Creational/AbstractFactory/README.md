@@ -1,6 +1,8 @@
 # Abstract factory
 
-![Abstract factory](/public/assets/Pattern/Creational/AbstractFactory/icon.png)
+<p align="center">
+  <img src="/public/assets/Pattern/Creational/AbstractFactory/icon.png">
+</p>
 
 *Abstract Factory* is a creational design pattern that lets you produce families of related objects 
 without specifying their concrete classes.
