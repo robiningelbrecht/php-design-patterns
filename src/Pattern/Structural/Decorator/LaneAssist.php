@@ -9,7 +9,7 @@ use Money\Money;
  *
  * @package App\Vehicle
  */
-class LaneAssist extends VehicleOption {
+class LaneAssist extends VehicleDecorator {
 
   /**
    * {@inheritdoc}

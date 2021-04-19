@@ -4,11 +4,11 @@
 namespace App\Vehicle;
 
 /**
- * Class VehicleDefaultPart.
+ * Class VehiclePart.
  *
  * @package App\Vehicle
  */
-class VehicleDefaultPart {
+class VehiclePart {
 
   /**
    * @var string

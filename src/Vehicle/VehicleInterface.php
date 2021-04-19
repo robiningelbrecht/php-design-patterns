@@ -34,9 +34,9 @@ interface VehicleInterface {
   public function stopEngine(): void;
 
   /**
-   * @param \App\Vehicle\VehicleDefaultPart $part
+   * @param \App\Vehicle\VehiclePart $part
    * @return \App\Vehicle\VehicleInterface
    */
-  public function addDefaultPart(VehicleDefaultPart $part): VehicleInterface;
+  public function addPart(VehiclePart $part): VehicleInterface;
 
 }

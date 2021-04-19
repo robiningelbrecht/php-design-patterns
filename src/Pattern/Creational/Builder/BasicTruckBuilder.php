@@ -3,12 +3,10 @@
 
 namespace App\Pattern\Creational\Builder;
 
-use App\Vehicle\Car;
 use App\Vehicle\Enum\Brand;
 use App\Vehicle\Truck;
-use App\Vehicle\VehicleDefaultPart;
 use App\Vehicle\VehicleInterface;
-use App\Vehicle\VehicleOption;
+use App\Vehicle\VehiclePart;
 use Money\Money;
 
 /**
@@ -36,7 +34,7 @@ class BasicTruckBuilder implements VehicleBuilderInterface {
    * {@inheritdoc}
    */
   public function addAudioSystem(): VehicleBuilderInterface {
-    $this->vehicle->addDefaultPart(new VehicleDefaultPart('Standard cheap audio system'));
+    $this->vehicle->addPart(new VehiclePart('Standard cheap audio system'));
     return $this;
   }
 
@@ -44,7 +42,7 @@ class BasicTruckBuilder implements VehicleBuilderInterface {
    * {@inheritdoc}
    */
   public function addSeatCovers(): VehicleBuilderInterface {
-    $this->vehicle->addDefaultPart(new VehicleDefaultPart('Fabric seat covers'));
+    $this->vehicle->addPart(new VehiclePart('Fabric seat covers'));
     return $this;
   }
 

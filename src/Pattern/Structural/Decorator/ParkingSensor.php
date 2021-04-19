@@ -10,7 +10,7 @@ use Money\Money;
  *
  * @package App\Vehicle
  */
-class ParkingSensor extends VehicleOption {
+class ParkingSensor extends VehicleDecorator {
 
   /**
    * {@inheritdoc}

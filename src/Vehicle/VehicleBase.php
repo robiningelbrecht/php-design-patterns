@@ -24,7 +24,7 @@ abstract class VehicleBase implements VehicleInterface {
   protected Money $price;
 
   /**
-   * @var \App\Vehicle\VehicleDefaultPart[]
+   * @var \App\Vehicle\VehiclePart[]
    */
   protected array $parts;
 
@@ -57,13 +57,14 @@ abstract class VehicleBase implements VehicleInterface {
    * {@inheritdoc}
    */
   public function stopEngine(): void {
+    echo 'take key out of ignition';
     echo 'engine is off';
   }
 
   /**
    * {@inheritdoc}
    */
-  public function addDefaultPart(VehicleDefaultPart $part): VehicleInterface {
+  public function addPart(VehiclePart $part): VehicleInterface {
     $this->parts[] = $part;
     return $this;
   }

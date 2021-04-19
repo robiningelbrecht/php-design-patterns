@@ -8,7 +8,6 @@ use App\Pattern\Creational\AbstractFactory\MercedesVehicleFactory;
 use App\Pattern\Creational\Builder\BasicTruckBuilder;
 use App\Pattern\Creational\Builder\HighEndCarBuilder;
 use App\Pattern\Creational\FactoryMethod\BmwVehicleEngineFactory;
-use App\Pattern\Creational\FactoryMethod\VehicleEngineFactory;
 use App\Pattern\Creational\FactoryMethod\VolkswagenVehicleEngineFactory;
 use App\Pattern\Creational\Singleton\VehicleLogger;
 use App\Pattern\Creational\StaticCreationMethod\CarWithFactoryMethod;
