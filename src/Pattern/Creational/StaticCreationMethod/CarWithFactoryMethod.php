@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Pattern\Creational\FactoryMethod;
+namespace App\Pattern\Creational\StaticCreationMethod;
 
 use App\Vehicle\Car;
 use App\Vehicle\Enum\Brand;
@@ -11,7 +11,7 @@ use Money\Money;
 /**
  * Class CarWithFactoryMethod.
  *
- * @package App\Pattern\Creational\FactoryMethod
+ * @package App\Pattern\Creational\StaticCreationMethod
  */
 class CarWithFactoryMethod extends Car {
 

@@ -5,11 +5,10 @@ namespace App\Pattern\Creational;
 
 use App\Pattern\Creational\AbstractFactory\BmwVehicleFactory;
 use App\Pattern\Creational\AbstractFactory\MercedesVehicleFactory;
-use App\Pattern\Creational\AbstractFactory\VehicleFactoryInterface;
 use App\Pattern\Creational\Builder\BasicTruckBuilder;
 use App\Pattern\Creational\Builder\HighEndCarBuilder;
-use App\Pattern\Creational\FactoryMethod\CarWithFactoryMethod;
 use App\Pattern\Creational\Singleton\VehicleLogger;
+use App\Pattern\Creational\StaticCreationMethod\CarWithFactoryMethod;
 use App\Vehicle\Enum\Brand;
 use App\Vehicle\Truck;
 use Money\Money;
@@ -24,7 +23,7 @@ class CreationalPatternsController {
   /**
    * Demonstrates how to use factory method pattern.
    */
-  public function exampleFactoryMethod() {
+  public function exampleStaticCreationMethod() {
     $price = Money::EUR(2000000);
 
     // Create instance of volkswagen truck by using "new".

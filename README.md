@@ -6,7 +6,7 @@
 * [Builder](src/Pattern/Creational/Builder)
 * [FactoryMethod](src/Pattern/Creational/FactoryMethod)
 * [Singleton](src/Pattern/Creational/Singleton)
-
+* [StaticCreationMethod](src/Pattern/Creational/StaticCreationMethod)
 
 ## Structural
 
