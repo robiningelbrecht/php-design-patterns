@@ -41,24 +41,24 @@ abstract class VehicleEngineFactory {
   /**
    * Starts the engine of the vehicle.
    */
-  public function start() {
+  public function start(): array {
     $vehicle = $this->getVehicle();
 
     // Dome some things before starting engine
     // ...
     // Start engine.
-    $vehicle->startEngine();
+    return $vehicle->startEngine();
   }
 
   /**
    * Stops the engine of the vehicle.
    */
-  public function stop() {
+  public function stop(): array {
     $vehicle = $this->getVehicle();
 
     // Dome some things before stopping engine
     // ...
     // Stop engine.
-    $vehicle->stopEngine();
+    return $vehicle->stopEngine();
   }
 }

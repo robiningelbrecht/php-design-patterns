@@ -4,8 +4,8 @@
 namespace App\Pattern\Structural\Decorator;
 
 use App\Vehicle\Enum\Brand;
+use App\Vehicle\Enum\Part;
 use App\Vehicle\VehicleInterface;
-use App\Vehicle\VehiclePart;
 use Money\Money;
 
 /**
@@ -47,20 +47,20 @@ abstract class VehicleDecorator implements VehicleInterface {
    * {@inheritdoc}
    */
   public function startEngine(): array {
-    $this->vehicle->startEngine();
+    return $this->vehicle->startEngine();
   }
 
   /**
    * {@inheritdoc}
    */
   public function stopEngine(): array {
-    $this->vehicle->startEngine();
+    return $this->vehicle->startEngine();
   }
 
   /**
    * {@inheritdoc}
    */
-  public function addPart(VehiclePart $part): VehicleInterface {
+  public function addPart(Part $part): VehicleInterface {
     $this->vehicle->addPart($part);
     return $this->vehicle;
   }

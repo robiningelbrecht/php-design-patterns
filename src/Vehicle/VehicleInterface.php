@@ -4,6 +4,7 @@
 namespace App\Vehicle;
 
 use App\Vehicle\Enum\Brand;
+use App\Vehicle\Enum\Part;
 use Money\Money;
 
 /**
@@ -34,9 +35,15 @@ interface VehicleInterface {
   public function stopEngine(): array;
 
   /**
-   * @param \App\Vehicle\VehiclePart $part
+   * @param \App\Vehicle\Enum\Part $part
    * @return \App\Vehicle\VehicleInterface
    */
-  public function addPart(VehiclePart $part): VehicleInterface;
+  public function addPart(Part $part): VehicleInterface;
+
+  /**
+   * @param \App\Vehicle\Enum\Part $p
+   * @return bool
+   */
+  public function hasPart(Part $p): bool;
 
 }

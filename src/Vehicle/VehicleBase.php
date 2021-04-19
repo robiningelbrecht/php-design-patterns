@@ -4,6 +4,7 @@
 namespace App\Vehicle;
 
 use App\Vehicle\Enum\Brand;
+use App\Vehicle\Enum\Part;
 use Money\Money;
 
 /**
@@ -24,7 +25,7 @@ abstract class VehicleBase implements VehicleInterface {
   protected Money $price;
 
   /**
-   * @var \App\Vehicle\VehiclePart[]
+   * @var \App\Vehicle\Enum\Part[]
    */
   protected array $parts;
 
@@ -63,8 +64,21 @@ abstract class VehicleBase implements VehicleInterface {
   /**
    * {@inheritdoc}
    */
-  public function addPart(VehiclePart $part): VehicleInterface {
+  public function addPart(Part $part): VehicleInterface {
     $this->parts[] = $part;
     return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function hasPart(Part $p): bool {
+    foreach ($this->parts as $part) {
+      if ($part->equals($p)) {
+        return TRUE;
+      }
+    }
+
+    return FALSE;
   }
 }

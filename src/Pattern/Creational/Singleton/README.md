@@ -7,7 +7,7 @@ __Identification__: Singleton can be recognized by a static creation method, whi
 
 ## Structure
 
-![Structure](/public/assets/Pattern/Creational/Singleton/structure.png)
+![Structure](/public/assets/Pattern/Creational/singleton.png)
 
 ## Source
 

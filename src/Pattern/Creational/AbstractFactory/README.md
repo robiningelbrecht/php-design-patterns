@@ -8,7 +8,7 @@ Then, the factory is used for creating specific sub-components.
 
 ## Structure
 
-![Structure](/public/assets/Pattern/Creational/AbstractFactory/structure.png)
+![Structure](/public/assets/Pattern/Creational/abstract-factory.png)
 
 ## Source
 

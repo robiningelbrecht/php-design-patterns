@@ -8,7 +8,7 @@ but return them as objects of abstract type or interface.
 
 ## Structure
 
-![Structure](/public/assets/Pattern/Creational/FactoryMethod/structure.png)
+![Structure](/public/assets/Pattern/Creational/factory-method.png)
 
 ## Source
 

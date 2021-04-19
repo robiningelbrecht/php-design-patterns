@@ -5,9 +5,8 @@ namespace App\Pattern\Creational\Builder;
 
 use App\Vehicle\Car;
 use App\Vehicle\Enum\Brand;
-use App\Vehicle\VehicleDefaultPart;
+use App\Vehicle\Enum\Part;
 use App\Vehicle\VehicleInterface;
-use App\Vehicle\VehicleOption;
 use Money\Money;
 
 /**
@@ -35,7 +34,7 @@ class HighEndCarBuilder implements VehicleBuilderInterface {
    * {@inheritdoc}
    */
   public function addAudioSystem(): VehicleBuilderInterface {
-    $this->vehicle->addDefaultPart(new VehicleDefaultPart('Expensive Bose audio system'));
+    $this->vehicle->addPart(Part::BOSE_AUDIO_SYSTEM());
     return $this;
   }
 
@@ -43,7 +42,7 @@ class HighEndCarBuilder implements VehicleBuilderInterface {
    * {@inheritdoc}
    */
   public function addSeatCovers(): VehicleBuilderInterface {
-    $this->vehicle->addDefaultPart(new VehicleDefaultPart('Leather seat covers'));
+    $this->vehicle->addPart(Part::LEATHER_SEAT_COVERS());
     return $this;
   }
 

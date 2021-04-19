@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Pattern\Creational\Tests;
+namespace App\Tests\Pattern\Creational;
 
 use App\Pattern\Creational\AbstractFactory\BmwVehicleFactory;
 use App\Pattern\Creational\AbstractFactory\MercedesVehicleFactory;
@@ -18,9 +18,9 @@ use PHPUnit\Framework\TestCase;
 class AbstractFactoryTest extends TestCase {
 
   /**
-   * Test abstract factory
+   * Test abstract factory pattern
    */
-  public function testBrandFactories(): void {
+  public function testPattern(): void {
     $price = Money::EUR(2000000);
 
     // BMW factory.

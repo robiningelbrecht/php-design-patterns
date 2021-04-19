@@ -9,7 +9,7 @@ several methods to configure the resulting object. Builder methods often support
 
 ## Structure
 
-![Structure](/public/assets/Pattern/Creational/Builder/structure.png)
+![Structure](/public/assets/Pattern/Creational/builder.png)
 
 ## Source
 
