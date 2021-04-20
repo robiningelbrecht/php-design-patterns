@@ -10,7 +10,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "moneyphp/money": "^3.3",
-        "scrivo/highlight.php": "v9.18.1.6",
+        "scrivo/highlight.php": "^9.18",
         "sensio/framework-extra-bundle": "^6.1",
         "spatie/enum": "^3.8",
         "symfony/console": "5.2.*",
