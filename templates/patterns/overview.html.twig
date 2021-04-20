@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <ul>
+            {% for pattern_type, patterns in pattern_list %}
+                <li>{{ pattern_type }}
+                    <ul>
+                        {% for pattern in patterns %}
+                            <li><a href="{{ path('php_design_pattern', {pattern_type: pattern_type, pattern: pattern}) }}">{{ pattern }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
