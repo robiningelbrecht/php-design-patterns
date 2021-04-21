@@ -61,5 +61,11 @@ class TeslaMaintenanceAdapter implements CarMaintenanceInterface {
     // Electrical car doesn't need this.
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getChecksPerformed(): int {
+    return $this->teslaMaintenance->getChecksPerformed();
+  }
 
 }

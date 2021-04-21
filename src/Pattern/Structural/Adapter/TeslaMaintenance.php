@@ -13,6 +13,11 @@ use App\Vehicle\VehicleInterface;
 class TeslaMaintenance {
 
   /**
+   * @var int
+   */
+  protected int $checksPerformed;
+
+  /**
    * @var \App\Vehicle\VehicleInterface
    */
   protected VehicleInterface $tesla;
@@ -24,6 +29,7 @@ class TeslaMaintenance {
    */
   public function __construct(VehicleInterface $tesla) {
     $this->tesla = $tesla;
+    $this->checksPerformed = 0;
   }
 
   /**
@@ -31,6 +37,7 @@ class TeslaMaintenance {
    */
   public function hasGoodBrakes(): bool {
     // Do checks.
+    $this->checksPerformed++;
     return TRUE;
   }
 
@@ -39,6 +46,7 @@ class TeslaMaintenance {
    */
   public function brakeSoftwareIsStillInPlace(): bool {
     // Do checks.
+    $this->checksPerformed++;
     return TRUE;
   }
 
@@ -47,6 +55,14 @@ class TeslaMaintenance {
    */
   public function checkTirePressure(): void {
     // Do checks.
+    $this->checksPerformed++;
+  }
+
+  /**
+   * @return int
+   */
+  public function getChecksPerformed(): int {
+    return $this->checksPerformed;
   }
 
 

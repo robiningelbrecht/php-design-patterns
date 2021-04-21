@@ -12,6 +12,7 @@ use Spatie\Enum\Enum;
  * @method static self BMW()
  * @method static self MERCEDES()
  * @method static self VOLKSWAGEN()
+ * @method static self TESLA()
  *
  * @package App\Vehicle\Enum
  */

@@ -13,6 +13,11 @@ use App\Vehicle\VehicleInterface;
 class MechanicalCarMaintenance implements CarMaintenanceInterface {
 
   /**
+   * @var int
+   */
+  protected int $checksPerformed;
+
+  /**
    * @var \App\Vehicle\VehicleInterface
    */
   protected VehicleInterface $mechanicalVehicle;
@@ -24,6 +29,7 @@ class MechanicalCarMaintenance implements CarMaintenanceInterface {
    */
   public function __construct(VehicleInterface $vehicle) {
     $this->mechanicalVehicle = $vehicle;
+    $this->checksPerformed = 0;
   }
 
   /**
@@ -31,6 +37,7 @@ class MechanicalCarMaintenance implements CarMaintenanceInterface {
    */
   public function hasGoodBrakes(): bool {
     // Do checks and return bool.
+    $this->checksPerformed++;
     return TRUE;
   }
 
@@ -39,6 +46,7 @@ class MechanicalCarMaintenance implements CarMaintenanceInterface {
    */
   public function hasSufficientEngineCoolant(): bool {
     // Do checks and return bool.
+    $this->checksPerformed++;
     return TRUE;
   }
 
@@ -46,7 +54,8 @@ class MechanicalCarMaintenance implements CarMaintenanceInterface {
    * {@inheritdoc}
    */
   public function changeEngineOil(): void {
-   // Check and change the oil.
+    // Check and change the oil.
+    $this->checksPerformed++;
   }
 
   /**
@@ -54,6 +63,7 @@ class MechanicalCarMaintenance implements CarMaintenanceInterface {
    */
   public function checkTirePressure(): void {
     // Check the tire pressure.
+    $this->checksPerformed++;
   }
 
   /**
@@ -61,7 +71,14 @@ class MechanicalCarMaintenance implements CarMaintenanceInterface {
    */
   public function checkAndChangeSparkPlugs(): void {
     // Check and change spark plugs.
+    $this->checksPerformed++;
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getChecksPerformed(): int {
+    return $this->checksPerformed;
+  }
 
 }

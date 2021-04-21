@@ -34,4 +34,9 @@ interface CarMaintenanceInterface {
    */
   public function checkAndChangeSparkPlugs(): void;
 
+  /**
+   * @return int
+   */
+  public function getChecksPerformed(): int;
+
 }
