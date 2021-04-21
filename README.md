@@ -12,10 +12,6 @@
 $ ./vendor/bin/phpunit
 ```
 
-# Examples
-
-- Navigate to http://127.0.0.1:8000/php-design-patterns
-
 # Included patterns
 
 ## Creational
@@ -29,6 +25,7 @@ $ ./vendor/bin/phpunit
 ## Structural
 
 * [Decorator](src/Pattern/Structural/Decorator)
+* [Adapter](src/Pattern/Structural/Adapter)
 
 ## Behavioral
 
