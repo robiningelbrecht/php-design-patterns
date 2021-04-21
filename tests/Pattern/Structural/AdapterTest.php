@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Tests\Pattern\Structural;
 
 use App\Pattern\Creational\StaticCreationMethod\CarWithFactoryMethod;
@@ -38,16 +37,16 @@ class AdapterTest extends TestCase {
     $this->assertEquals(4, $maintenance->getChecksPerformed());
 
     $tesla = new Car(Brand::TESLA(), Money::EUR(1000));
-    $maintenance = new TeslaMaintenanceAdapter(new TeslaMaintenance($tesla));
+    $tesla_maintenance = new TeslaMaintenanceAdapter(new TeslaMaintenance($tesla));
 
-    $maintenance->checkTirePressure();
-    $this->assertEquals(1, $maintenance->getChecksPerformed());
+    $tesla_maintenance->checkTirePressure();
+    $this->assertEquals(1, $tesla_maintenance->getChecksPerformed());
 
-    $maintenance->changeEngineOil();
-    $this->assertEquals(1, $maintenance->getChecksPerformed());
+    $tesla_maintenance->changeEngineOil();
+    $this->assertEquals(1, $tesla_maintenance->getChecksPerformed());
 
-    $maintenance->hasGoodBrakes();
-    $maintenance->checkAndChangeSparkPlugs();
-    $this->assertEquals(3, $maintenance->getChecksPerformed());
+    $tesla_maintenance->hasGoodBrakes();
+    $tesla_maintenance->checkAndChangeSparkPlugs();
+    $this->assertEquals(3, $tesla_maintenance->getChecksPerformed());
   }
 }

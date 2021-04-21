@@ -24,8 +24,9 @@ $ ./vendor/bin/phpunit
 
 ## Structural
 
-* [Decorator](src/Pattern/Structural/Decorator)
 * [Adapter](src/Pattern/Structural/Adapter)
+* [Bridge](src/Pattern/Structural/Bridge)
+* [Decorator](src/Pattern/Structural/Decorator)
 
 ## Behavioral
 

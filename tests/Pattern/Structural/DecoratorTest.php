@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Tests\Pattern\Structural;
 
 use App\Pattern\Structural\Decorator\DigitalKey;
