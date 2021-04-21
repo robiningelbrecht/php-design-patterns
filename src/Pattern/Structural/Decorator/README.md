@@ -12,4 +12,4 @@ constructor that accept objects of the same class or interface as a current clas
 
 ## Source
 
-[https://refactoring.guru/design-patterns/abstract-factory](https://refactoring.guru/design-patterns/abstract-factory)
+[https://refactoring.guru/design-patterns/decorator](https://refactoring.guru/design-patterns/decorator)
