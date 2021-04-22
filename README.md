@@ -1,5 +1,8 @@
 [![Build Status](https://github.com/robiningelbrecht/php-design-patterns/actions/workflows/php.yml/badge.svg)](https://github.com/robiningelbrecht/php-design-patterns/actions)
 
+This repository contains the most common design patterns used in PHP. 
+All examples are built around "Vehicle" functionality. 
+
 # Installation
 
 - run `git clone git@github.com:robiningelbrecht/php-design-patterns.git`
@@ -28,9 +31,17 @@ $ ./vendor/bin/phpunit
 * [Bridge](src/Pattern/Structural/Bridge)
 * [Composite](src/Pattern/Structural/Composite)  
 * [Decorator](src/Pattern/Structural/Decorator)
+* Facade (TODO)
 
 ## Behavioral
 
+* Chain of Responsibility (TODO)
+* Command (TODO)
+* Iterator (TODO)
+* Observer (TODO)
+* Strategy (TODO)
+* Template method (TODO)
+* Visitor (TODO)
 
 ### Note
 
