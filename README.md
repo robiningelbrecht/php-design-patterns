@@ -31,7 +31,7 @@ $ ./vendor/bin/phpunit
 * [Bridge](src/Pattern/Structural/Bridge)
 * [Composite](src/Pattern/Structural/Composite)  
 * [Decorator](src/Pattern/Structural/Decorator)
-* Facade (TODO)
+* [Facade](src/Pattern/Structural/Facade)
 
 ## Behavioral
 
