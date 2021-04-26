@@ -6,16 +6,16 @@ namespace App\Pattern\Behavioral\Iterator;
 use App\Vehicle\VehicleInterface;
 
 /**
- * Class VehicleList.
+ * Class CarList.
  *
  * @package App\Pattern\Behavioral\Iterator
  */
-class VehicleList implements \Countable, \Iterator {
+class CarList implements \Countable, \Iterator {
 
   /**
-   * @var \App\Vehicle\VehicleInterface[]
+   * @var \App\Pattern\Behavioral\Iterator\CarWithId[]
    */
-  protected array $vehicles;
+  protected array $cars;
 
   /**
    * @var int
@@ -26,58 +26,74 @@ class VehicleList implements \Countable, \Iterator {
    * VehicleList constructor.
    */
   public function __construct() {
-    $this->vehicles = [];
+    $this->cars = [];
     $this->currentIndex = 0;
   }
 
   /**
-   * @param \App\Vehicle\VehicleInterface $vehicle
-   * @return \App\Pattern\Behavioral\Iterator\VehicleList
+   * @param \App\Pattern\Behavioral\Iterator\CarWithId $vehicle
+   * @return \App\Pattern\Behavioral\Iterator\CarList
    */
-  public function add(VehicleInterface $vehicle): VehicleList {
-    $this->vehicles[] = $vehicle;
+  public function add(CarWithId $vehicle): CarList {
+    $this->cars[] = $vehicle;
     return $this;
   }
 
   /**
-   * @param \App\Vehicle\VehicleInterface $vehicle
-   * @return \App\Pattern\Behavioral\Iterator\VehicleList
+   * @param \App\Pattern\Behavioral\Iterator\CarWithId $vehicle_to_remove
+   * @return \App\Pattern\Behavioral\Iterator\CarList
    */
-  public function remove(VehicleInterface $vehicle): VehicleList {
-    foreach ($this->vehicles as $key => $vehicle) {
-      if ($vehicle->() === $bookToRemove->getAuthorAndTitle()) {
-        unset($this->vehicles[$key]);
+  public function remove(CarWithId $vehicle_to_remove): CarList {
+    foreach ($this->cars as $key => $vehicle) {
+      if ($vehicle->getId() === $vehicle_to_remove->getId()) {
+        unset($this->cars[$key]);
       }
     }
 
-    $this->vehicles = array_values($this->vehicles);
+    $this->cars = array_values($this->cars);
     return $this;
   }
 
-
-  public function current() {
-    // TODO: Implement current() method.
+  /**
+   * {@inheritdoc}
+   */
+  public function current(): CarWithId {
+    return $this->cars[$this->currentIndex];
   }
 
-  public function next() {
-    // TODO: Implement next() method.
+  /**
+   * {@inheritdoc}
+   */
+  public function next(): void {
+    $this->currentIndex++;
   }
 
-  public function key() {
-    // TODO: Implement key() method.
+  /**
+   * {@inheritdoc}
+   */
+  public function key(): int {
+    return $this->currentIndex;
   }
 
-  public function valid() {
-    // TODO: Implement valid() method.
+  /**
+   * {@inheritdoc}
+   */
+  public function valid(): bool {
+    return isset($this->cars[$this->currentIndex]);
   }
 
-  public function rewind() {
-    // TODO: Implement rewind() method.
+  /**
+   * {@inheritdoc}
+   */
+  public function rewind(): void {
+    $this->currentIndex = 0;
   }
 
-  public function count() {
-    // TODO: Implement count() method.
+  /**
+   * {@inheritdoc}
+   */
+  public function count(): int {
+    return count($this->cars);
   }
-
 
 }

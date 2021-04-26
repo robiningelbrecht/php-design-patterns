@@ -37,7 +37,7 @@ $ ./vendor/bin/phpunit
 
 * [Chain of Responsibility](src/Pattern/Behavioral/ChainOfResponsibility) 
 * [Command](src/Pattern/Behavioral/Command)
-* Iterator (TODO)
+* [Iterator](src/Pattern/Behavioral/Iterator)
 * Observer (TODO)
 * Strategy (TODO)
 * Template method (TODO)

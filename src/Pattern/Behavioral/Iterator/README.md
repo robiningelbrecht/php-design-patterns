@@ -1,16 +1,15 @@
-# Command
+# Iterator
 
-__Command__ is a behavioral design pattern that turns a request into a stand-alone object that contains 
-all information about the request. This transformation lets you pass requests as a method arguments, 
-delay or queue a request’s execution, and support undoable operations.
+__Iterator__ is a behavioral design pattern that lets you traverse elements of a collection 
+without exposing its underlying representation (list, stack, tree, etc.).
 
-__Identification__: The pattern is recognizable by behavioral methods of one group of objects 
-that indirectly call the same methods in other objects, while all the objects follow the common interface.
+__Identification__: Iterator is easy to recognize by the navigation methods (such as next, previous and others). 
+Client code that uses iterators might not have direct access to the collection being traversed.
 
 ## Structure
 
-![Structure](/public/assets/Pattern/Behavioral/command.png)
+![Structure](/public/assets/Pattern/Behavioral/iterator.png)
 
 ## Source
 
-[https://refactoring.guru/design-patterns/command](https://refactoring.guru/design-patterns/command)
+[https://refactoring.guru/design-patterns/iterator](https://refactoring.guru/design-patterns/iterator)
