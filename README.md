@@ -19,11 +19,11 @@ $ ./vendor/bin/phpunit
 
 ## Creational
 
-* [AbstractFactory](src/Pattern/Creational/AbstractFactory)
+* [Abstract Factory](src/Pattern/Creational/AbstractFactory)
 * [Builder](src/Pattern/Creational/Builder)
-* [FactoryMethod](src/Pattern/Creational/FactoryMethod)
+* [Factory Method](src/Pattern/Creational/FactoryMethod)
 * [Singleton](src/Pattern/Creational/Singleton)
-* [StaticCreationMethod](src/Pattern/Creational/StaticCreationMethod)
+* [Static Creation Method](src/Pattern/Creational/StaticCreationMethod)
 
 ## Structural
 
