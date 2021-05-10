@@ -40,8 +40,7 @@ $ ./vendor/bin/phpunit
 * [Iterator](src/Pattern/Behavioral/Iterator)
 * [Observer](src/Pattern/Behavioral/Observer)
 * [Strategy](src/Pattern/Behavioral/Strategy)
-* Template method (TODO)
-* Visitor (TODO)
+* [Visitor](src/Pattern/Behavioral/Visitor)
 
 ### Note
 
