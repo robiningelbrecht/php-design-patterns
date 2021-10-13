@@ -29,4 +29,4 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
     - name: Run test suite
-      run: composer run-script test
+      run: vendor/bin/phpunit --coverage-clover clover.cmx
